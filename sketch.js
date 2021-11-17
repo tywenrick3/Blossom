@@ -1,6 +1,6 @@
 let b = [];
-var angle = 0;
-var slider;
+let angle = 0;
+let slider;
 let multiplier = 0.67;
 
 function setup() {
