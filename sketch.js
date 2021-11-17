@@ -17,6 +17,7 @@ function draw() {
 }
 
 function branch(len) {
+	//set stroke color and weight
 	stroke(255);
 	strokeWeight(2);
 	line(0, 0, 0, -len);
@@ -33,7 +34,7 @@ function branch(len) {
 		rotate(angle);
 		branch(len * multiplier);
 		pop();
-		// second branck
+		//second branch
 		push();
 		rotate(-angle);
 		branch(len * multiplier);
