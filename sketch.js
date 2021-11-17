@@ -1,7 +1,44 @@
+let b = [];
+var angle = 0;
+var slider;
+
 function setup() {
-  createCanvas(400, 400);
+	createCanvas(800, 600);
+	reset();
 }
 
 function draw() {
-  background(220);
+	background(54, 186, 219);
+	angle = slider.value();
+	stroke(255);
+	translate(400, height);
+	branch(200);
+}
+
+function branch(len) {
+	line(0, 0, 0, -len);
+	translate(0, -len);
+	if (len > 4) {
+		push();
+		rotate(angle);
+		branch(len * 0.67);
+		pop();
+		push();
+		rotate(-angle);
+		branch(len * 0.67);
+		pop();
+	}
+	if (len < 4) {
+		noStroke();
+		fill('green');
+		ellipse(0, len, 3, 10);
+	}
+}
+
+function reset() {
+	while (b.length > 0) {
+		b.pop();
+	}
+	slider = createSlider(0, TWO_PI, PI / 4, 0.01); // min, max, defualt value, step
+	angle = 0;
 }
