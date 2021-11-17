@@ -40,5 +40,6 @@ function reset() {
 		b.pop();
 	}
 	slider = createSlider(0, TWO_PI, PI / 4, 0.01); // min, max, defualt value, step
+	slider.position(windowWidth / 2 - 80, height + 30);
 	angle = 0;
 }
