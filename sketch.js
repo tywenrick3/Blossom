@@ -8,7 +8,7 @@ function setup() {
 }
 
 function draw() {
-	background(54, 186, 219);
+	background('#87cefa');
 	angle = slider.value();
 	stroke(255);
 	translate(400, height);
@@ -16,6 +16,8 @@ function draw() {
 }
 
 function branch(len) {
+	stroke(255);
+	strokeWeight(2);
 	line(0, 0, 0, -len);
 	translate(0, -len);
 	if (len > 4) {
