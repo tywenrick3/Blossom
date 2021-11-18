@@ -25,7 +25,7 @@ function branch(len) {
 	// Base Case - draw leaf
 	if (len < 4) {
 		noStroke();
-		fill('green');
+		fill('pink');
 		ellipse(0, len, 3, 10);
 	}
 
