@@ -6,6 +6,8 @@ let mode;
 
 function setup() {
 	createCanvas(800, 600);
+	slider = createSlider(0, TWO_PI, PI / 4, 0.01); // min, max, defualt value, step
+	slider.position(windowWidth / 2 - 80, height + 30);
 	reset();
 }
 
@@ -21,17 +23,13 @@ function draw() {
 }
 
 function start() {
-	background('green');
+	background('#f1a1d9');
 	textAlign(CENTER);
 	fill('white');
 	textSize(72);
-	textFont('adage-script-jf, sans-serif');
-	text('plants', width / 2, height / 2);
+	textFont('bilo, sans-serif');
+	text('Blossom', width / 2, height / 2);
 	textSize(22);
-	textFont('input-serif, serif');
-	text('create your tree!', width / 2, height / 2 + 50);
-	textFont('input-serif, serif');
-	textSize(18);
 	text('press enter', width / 2, height / 2 + 250);
 }
 
@@ -83,7 +81,5 @@ function reset() {
 		b.pop();
 	}
 	mode = 0;
-	slider = createSlider(0, TWO_PI, PI / 4, 0.01); // min, max, defualt value, step
-	slider.position(windowWidth / 2 - 80, height + 30);
 	angle = 0;
 }
