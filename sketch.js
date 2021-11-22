@@ -3,6 +3,16 @@ let angle = 0;
 let slider;
 let multiplier = 0.67;
 let mode;
+let leafColor = 'pink';
+let colors = [
+	'green',
+	'yellow',
+	'red',
+	'brown',
+	'pink',
+	'purple',
+	'lightgreen',
+];
 
 function setup() {
 	createCanvas(800, 600);
@@ -48,6 +58,10 @@ function keyPressed() {
 	if (keyCode == 27 && mode == 1) {
 		reset();
 	}
+	if (keyCode == 32 && mode == 1) {
+		let index = floor(random(0, 7));
+		leafColor = colors[index];
+	}
 }
 
 function branch(len) {
@@ -59,7 +73,7 @@ function branch(len) {
 	// Base Case - draw leaf
 	if (len < 4) {
 		noStroke();
-		fill('pink');
+		fill(leafColor);
 		ellipse(0, len, 3, 10);
 	}
 
