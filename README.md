@@ -1,4 +1,4 @@
-# Plants!
+# Blossom!
 
 An experimental interactive plant experiance
 
